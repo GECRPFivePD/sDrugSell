@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Gilroy-SemiBold";
+    src: url("./assets/fonts/Gilroy-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("./assets/fonts/Gilroy-Bold.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("./assets/fonts/Gilroy-Medium.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("./assets/fonts/Gilroy-Regular.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("./assets/fonts/Gilroy-Light.ttf");
+}
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+  
+.nui-wrapper {
+    display: none;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 40rem;
+    transform: translate(-50%, -50%);
+    padding: .8rem;
+    border-radius: 2px;
+    padding-bottom: 1rem;
+}
+
+.interaction-title {
+    display: none;
+    font-family: "Gilroy-Bold";
+    font-size: 1.5rem;
+    color: #F8F7F9;
+    text-shadow: 0 0 15px rgb(189, 189, 189);
+    text-align: center;
+}
+
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .7rem;
+    gap: .5rem;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 0.8rem;
+  background-color: rgba(21, 21, 21, 0.95);
+  box-shadow: 0 0 5px rgb(13, 13, 13);
+  padding: 0.4rem;
+  padding-left: .6rem;
+}
+
+.message i, .choice i {
+  display: flex;
+  color: white;
+  width: 1.8rem;
+  height: 1.8rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1px;
+}
+
+.icon-red {
+  border: 1px solid #a43131;
+  background-color: #ff4d4d;
+  box-shadow: 0 0 5px #ff4d4d;
+}
+.icon-blue {
+  border: 1px solid #03546d;
+  background-color: #046E8F;
+  box-shadow: 0 0 5px #046E8F;
+}
+.icon-green {
+  border: 1px solid #1f8264;
+  background-color: #29ab84;
+  box-shadow: 0 0 5px #29ab84;
+}
+
+.message .text {
+  display: flex;
+  align-items: center;
+  font-family: "Gilroy-Regular";
+  font-size: .9rem;
+  line-height: 7px;
+  color: white;
+  animation: typing 1.2s steps(40, end), blink-caret 2s step-end infinite;
+  white-space: nowrap; /* Keeps the content on a single line */
+  overflow: hidden;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.choice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(21, 21, 21, 0.95);
+  box-shadow: 0 0 5px rgb(13, 13, 13);
+  padding: .4rem;
+  padding-left: 0.6rem;
+  gap: .8rem;
+  cursor: pointer;
+}
+
+.hover:hover {
+  scale: 1.01;
+  box-shadow: 0 0 7px #000;
+}
+
+.hover-green:hover {
+  scale: 1.01;
+  box-shadow: 0 0 8px #28dcb6;
+  border: 2px solid #28dcb6;
+}
+
+.choice .text {
+  font-family: "Gilroy-Regular";
+  font-size: .9rem;
+  color: white;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 80% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  /* 50% { border-color: orange; } */
+}
+
+
+.item-select {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 85%;
+  left: 71%;
+  width: 6rem;
+  height: auto;
+  transform: translate(-50%, -50%);
+  gap: .5rem;
+}
+
+.item-slot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Gilroy-Regular";
+  font-size: .7rem;
+  text-align: center;
+  color: white;
+  padding: 0.8rem;
+  border-bottom: 3.5px solid #28dcb6;
+  cursor: pointer;
+  background: #0a0a0a78;
+}
+
+.item-slot img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.input svg {
+  position: absolute;
+    height: 1.05rem;
+    width: 1.05rem;
+    fill: #114334;
+    right: 0.5rem;
+    filter: drop-shadow(0 0 5px #29ab84);
+    fill: #29ab84 !important;
+}
+
+.input input:focus {
+  box-shadow: 0 0 7px #29ab84;
+}
+
+.input svg.disabled {
+  filter: none;
+  fill: rgb(26, 97, 71) !important;
+}
+
+.input input {
+  border: none;
+  height: 100%;
+  outline: 1.95px solid #29ab84;
+  background: transparent;
+  border-radius: 1.2px;
+  color: white;
+  padding-left: .5rem;
+}
+
+.nui-wrapper-rumors {
+  display: none;
+  position: absolute;
+  top: 85%;
+  left: 81%;
+  width: 40rem;
+  height: auto;
+  transform: translate(-50%, -50%);
+  background: #0a0a0aeb;
+  padding: .8rem;
+  border-radius: 2px;
+}
+
+.nui-wrapper-rumors .rumors-title {
+  text-align: center;
+  font-family: "Gilroy-Bold";
+  font-size: 1.6rem;
+  color: #F8F7F9;
+  text-shadow: 0 0 15px rgb(168, 168, 168);
+  justify-content: center;
+}
+
+.rumors-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: .5rem;
+}
+
+.rumors-list .rumor {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  font-family: 'Gilroy-Regular';
+  color: white;
+  align-items: center;
+  background-color: rgba(21, 21, 21, 0.95);
+  box-shadow: 0 0 5px rgb(13, 13, 13);
+  padding: 0.4rem;
+}
+
+.rumor i {
+  display: flex;
+  color: white;
+  width: 1.8rem;
+  height: 1.8rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1px;
+}

@@ -1,0 +1,35 @@
+{
+    "Aguja St": {
+        "Sinaps Dev": {
+            "meth": {
+                "sales": 2,
+                "citizenid": "SFC03225",
+                "owner": "Sinaps Dev",
+                "owned": true
+            }
+        },
+        "ballas": {
+            "meth": {
+                "sales": 1,
+                "owned": false
+            }
+        }
+    },
+    "Palomino Ave": {
+        "Sinaps Dev": {
+            "meth": {
+                "citizenid": "SFC03225",
+                "owner": "Sinaps Dev",
+                "sales": 20,
+                "owned": true
+            }
+        },
+        "ballas": {
+            "meth": {
+                "sales": 3,
+                "owner": "ballas",
+                "owned": true
+            }
+        }
+    }
+}
