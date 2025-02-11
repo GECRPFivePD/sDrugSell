@@ -23,7 +23,7 @@ end
 Config.Target = 'ox'
 
 Config.Drugs = {
-    ['weed'] = {
+    ['weed_baggy'] = {
         name = 'weed',
         label = 'Marijuana',
         minOffer = 1,
@@ -31,17 +31,25 @@ Config.Drugs = {
         minPrice = 30,
         maxPrice = 60
     },
-    ['cokebaggy'] = {
+    ['coke_baggy'] = {
         name = 'cokebaggy',
         label = 'Cocaine',
-        minOffer = 1,
-        maxOffer = 5,
-        minPrice = 30,
-        maxPrice = 60
+        minOffer = 2,
+        maxOffer = 10,
+        minPrice = 60,
+        maxPrice = 120
     },
-    ['meth'] = {
+    ['meth_baggy'] = {
         name = 'meth',
         label = 'Meth',
+        minOffer = 3,
+        maxOffer = 15,
+        minPrice = 150,
+        maxPrice = 180
+    },
+    ['coke_brick'] = {
+        name = 'cokebrick',
+        label = 'Cocaine brick',
         minOffer = 1,
         maxOffer = 5,
         minPrice = 30,
