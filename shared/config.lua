@@ -20,7 +20,7 @@ Config.PoliceAlert = function()
     TriggerServerEvent('police:server:policeAlert', 'Drug sale in progress')
 end
 
-Config.Target = 'qb'
+Config.Target = 'ox'
 
 Config.Drugs = {
     ['weed'] = {
