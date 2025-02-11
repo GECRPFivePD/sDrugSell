@@ -1,10 +1,10 @@
 Config = {}
 
 Config.SellComand = 'selldrugs' -- Command to sell drugs
-Config.SellKeybind = 'F1' -- Keybind to sell drugs (you can either use the command or the keybind)
+Config.SellKeybind = 'F9' -- Keybind to sell drugs (you can either use the command or the keybind)
 
 Config.ZoneControlCommand = 'zonecontrol' -- Command to control zones
-Config.ZoneControlKeybind = 'F2' -- Keybind to control zones (you can either use the command or the keybind)
+Config.ZoneControlKeybind = 'F10' -- Keybind to control zones (you can either use the command or the keybind)
 
 Config.SellingDistanceBetweenPed = 2.5 -- Distance between the seller and the buyer
 Config.MinimumSalesToOwnZone = 2 -- Minimum sales to own a zone
